@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_VOCAL_SI","CODE_POS":"M01","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"VOCAL_SI","CLIENT_ALIAS":"Intent Router","ROLE":"Parser l intention et router vers le bon workflow","FUNCTION":"Transforme une demande brute en intention exploitable","BUSINESS_FUNCTION":"Stabilise l entree et reduit les prompts flous","DEPENDS_ON":["M02","M04"],"USED_IN":["PRODUCTION"],"INPUTS":["user_request","project_context","workflow_catalog"],"OUTPUTS":["intent_label","route_target","priority_level"]}}}
+

@@ -1,0 +1,196 @@
+# INSTALL MANUAL GPV2
+
+## Purpose
+
+This guide explains how to install `ORA CORE OS` manually using the `GPV2` documents in this repository.
+
+This is a manual installation guide, not an automated installer.
+
+## Installation Goal
+
+The goal is to reproduce a working structured setup with:
+- one public-facing offer
+- one coherent master configuration
+- 22 internal modules
+- a clear reading and execution order
+- stable memory and quality gates
+
+## What You Need Before Installing
+
+- a workspace where you can maintain source-of-truth files
+- a place to store your master prompt or master profile
+- a project structure where modules can be referenced individually
+- a way to separate client-visible behavior from internal architecture
+
+Recommended setup:
+1. one master project for `ORA CORE OS`
+2. one folder for `GPV2` documents
+3. one file or prompt for the master architecture
+4. one file per module
+5. one manifest file for module order and dependencies
+
+## Source Files To Use
+
+Read and install from these files:
+1. [ORA_CORE_OS_22_Modules_GPV2.md](ORA_CORE_OS_22_Modules_GPV2.md)
+2. [GPV2/README.md](GPV2/README.md)
+3. [GPV2/modules_manifest.json](GPV2/modules_manifest.json)
+4. [GPV2/modules/](GPV2/modules)
+
+## Installation Model
+
+The recommended manual installation model is:
+1. install the master architecture
+2. install the 4 section groups
+3. install the 22 modules in code order
+4. wire module dependencies
+5. validate business blocks
+6. test end-to-end outputs
+
+## Step 1 - Install the Master Architecture
+
+Use the `MASTER` block as the top-level source of truth.
+
+You should preserve:
+- architecture purpose
+- section order
+- client offer
+- business blocks
+
+Minimum required fields:
+- `META.ID`
+- `META.VERSION`
+- `SECTIONS`
+- `CLIENT_BLOCKS`
+
+## Step 2 - Create the 4 Section Groups
+
+Create these four groups exactly:
+1. `S1 - ORCHESTRATION_GOUVERNANCE`
+2. `S2 - POSITIONNEMENT_PERSUASION`
+3. `S3 - MEMOIRE_APPRENTISSAGE`
+4. `S4 - PIPELINE_PRODUCTION`
+
+Do not flatten the system too early. The section grouping is what keeps the system readable.
+
+## Step 3 - Install the 22 Modules In Order
+
+Install in this order:
+1. `M01 VOCAL_SI`
+2. `M02 LOCK`
+3. `M03 PRIMORDIA`
+4. `M04 RESPIRA`
+5. `M05 AURA_MXB`
+6. `M06 RIME`
+7. `M07 MR_NET`
+8. `M08 MR_PROPRE`
+9. `M09 AUDIT`
+10. `M10 ARCH_PLUS`
+11. `M11 SONCAS`
+12. `M12 REM`
+13. `M13 REM_PLUS`
+14. `M14 ECHOTWIN`
+15. `M15 NEUTRINO`
+16. `M16 ORA_N6`
+17. `M17 JSON`
+18. `M18 EN`
+19. `M19 FR`
+20. `M20 GL`
+21. `M21 GL_G`
+22. `M22 NATIVE_FINAL`
+
+## Step 4 - Respect Dependency Wiring
+
+Each module file declares:
+- `DEPENDS_ON`
+- `USED_IN`
+- `INPUTS`
+- `OUTPUTS`
+
+Manual installation rule:
+- do not activate a module if its required upstream dependencies are missing
+- do not expose a client-visible workflow until `QUALITY` and `RETENTION` paths are defined
+
+Critical dependency paths:
+1. `VOCAL_SI -> RESPIRA -> JSON -> EN/FR/GL -> GL_G -> NATIVE_FINAL`
+2. `LOCK -> PRIMORDIA -> RIME -> MR_NET/MR_PROPRE -> AUDIT`
+3. `ARCH_PLUS -> SONCAS -> FR`
+4. `REM -> REM_PLUS -> ECHOTWIN -> NEUTRINO -> ORA_N6`
+
+## Step 5 - Configure the 4 Business Blocks
+
+Expose the system externally through these blocks:
+
+`ONBOARDING`
+- modules: `M10 M11 M13 M16`
+- output: persona, persuasion, memory base, canon index
+
+`PRODUCTION`
+- modules: `M01 M04 M17 M18 M19 M20 M21 M22`
+- output: commercial deliverables
+
+`QUALITY`
+- modules: `M02 M03 M05 M06 M07 M08 M09`
+- output: control, truth check, risk cleanup, audit trace
+
+`RETENTION`
+- modules: `M12 M13 M14 M15 M16`
+- output: memory state, patterns, signals, canon updates
+
+## Step 6 - Keep The Public Offer Simpler Than The Internal System
+
+Recommended rule:
+- internal complexity stays in GPV2
+- public offer stays simple
+
+The client should buy:
+- one copilot
+- one calibrated brand system
+- one memory layer
+- one quality layer
+
+The client should not be forced to understand all 22 modules.
+
+## Step 7 - Validate The Installation
+
+Validation checklist:
+1. `ONBOARDING` can produce a persona sheet
+2. `PRODUCTION` can produce a clean business output
+3. `QUALITY` can flag uncertainty and risky claims
+4. `RETENTION` can preserve useful information between runs
+5. `NATIVE_FINAL` does not invent facts outside `GL`
+
+## Step 8 - Recommended Manual Tests
+
+Run these tests after installation:
+1. feed a vague commercial brief and confirm `VOCAL_SI` routes it correctly
+2. feed risky or uncertain claims and confirm `PRIMORDIA` or `GL` tags them correctly
+3. generate one brand output and confirm `FR` respects `ARCH_PLUS` and `SONCAS`
+4. store one persistent project fact and confirm `REM_PLUS` and `ORA_N6` can recover it
+5. generate one final output and confirm `NATIVE_FINAL` adds no unsupported facts
+
+## Minimum Viable Manual Installation
+
+If you want the fastest usable version, install these first:
+1. `M01 VOCAL_SI`
+2. `M03 PRIMORDIA`
+3. `M06 RIME`
+4. `M10 ARCH_PLUS`
+5. `M11 SONCAS`
+6. `M13 REM_PLUS`
+7. `M17 JSON`
+8. `M19 FR`
+9. `M20 GL`
+10. `M22 NATIVE_FINAL`
+
+This gives you a usable first system without the full 22-module depth.
+
+## Files To Maintain As Source Of Truth
+
+Keep these synchronized:
+1. master architecture file
+2. modules manifest
+3. one file per module
+4. installation guide
+
+If these drift apart, the installation becomes interpretive instead of reliable.

@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_JSON","CODE_POS":"M17","VERSION":"1.0.0","TYPE":"PIPELINE_MODULE","GROUP":"S4","CLIENT_VISIBLE":false},"MODULE":{"NAME":"JSON","CLIENT_ALIAS":"Structured Container","ROLE":"Structurer la demande et la sortie","FUNCTION":"Transforme le besoin en schema stable, diffable et testable","BUSINESS_FUNCTION":"Rend le systeme maintenable et integrable","DEPENDS_ON":["M01"],"USED_IN":["PRODUCTION"],"INPUTS":["user_request","constraints","format_rules"],"OUTPUTS":["json_payload","schema_status"]}}}
+

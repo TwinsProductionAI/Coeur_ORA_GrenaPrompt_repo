@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_FR","CODE_POS":"M19","VERSION":"1.0.0","TYPE":"PIPELINE_MODULE","GROUP":"S4","CLIENT_VISIBLE":true},"MODULE":{"NAME":"FR","CLIENT_ALIAS":"Natural Voice Layer","ROLE":"Porter la narration et le ton de marque","FUNCTION":"Transforme la structure en sortie humaine lisible et persuasive","BUSINESS_FUNCTION":"Rend le contenu plus recevable et plus vendeur","DEPENDS_ON":["M10","M11","M17"],"USED_IN":["PRODUCTION"],"INPUTS":["json_payload","persona_sheet","persuasion_matrix"],"OUTPUTS":["natural_copy","tone_profile"]}}}
+

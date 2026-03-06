@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_MR_NET","CODE_POS":"M07","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"MR_NET","CLIENT_ALIAS":"Noise Cleaner","ROLE":"Purger le bruit et les fragments faibles","FUNCTION":"Supprime ou ecarte le contenu non rentable cognitivement","BUSINESS_FUNCTION":"Garde le systeme propre et limite la dette informationnelle","DEPENDS_ON":["M03","M09"],"USED_IN":["QUALITY"],"INPUTS":["candidate_fragments","quality_signals"],"OUTPUTS":["trash_list","retained_list","purge_report"]}}}
+

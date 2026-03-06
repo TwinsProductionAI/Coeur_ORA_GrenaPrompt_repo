@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_GL","CODE_POS":"M20","VERSION":"1.0.0","TYPE":"PIPELINE_MODULE","GROUP":"S4","CLIENT_VISIBLE":false},"MODULE":{"NAME":"GL","CLIENT_ALIAS":"Truth Layer","ROLE":"Porter faits, limites et incertitudes","FUNCTION":"Separer le vrai, le suppose et l incertain","BUSINESS_FUNCTION":"Evite que la sortie finale ajoute de faux faits","DEPENDS_ON":["M02","M03","M17"],"USED_IN":["PRODUCTION","QUALITY"],"INPUTS":["json_payload","constraints_lock","claims"],"OUTPUTS":["truth_map","limit_tags","unsure_tags"]}}}
+

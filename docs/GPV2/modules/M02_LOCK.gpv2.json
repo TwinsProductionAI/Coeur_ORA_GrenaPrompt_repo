@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_LOCK","CODE_POS":"M02","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"LOCK","CLIENT_ALIAS":"Constraint Gate","ROLE":"Appliquer les contraintes non negociables","FUNCTION":"Bloque les sorties hors cadre, hors promesse ou hors politique","BUSINESS_FUNCTION":"Protege le perimetre commercial et legal","DEPENDS_ON":[],"USED_IN":["QUALITY","PRODUCTION"],"INPUTS":["project_rules","policy_rules","client_limits"],"OUTPUTS":["allow","deny","limit_tags"]}}}
+

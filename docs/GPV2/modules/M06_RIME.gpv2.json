@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_RIME","CODE_POS":"M06","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"RIME","CLIENT_ALIAS":"Reasoning Compiler","ROLE":"Clarifier le raisonnement et reduire les biais","FUNCTION":"Reecrit les chaines internes en logique exploitable et propre","BUSINESS_FUNCTION":"Ameliore la robustesse et la lisibilite des livrables","DEPENDS_ON":["M03"],"USED_IN":["QUALITY"],"INPUTS":["draft_reasoning","constraints_lock"],"OUTPUTS":["rewrite_plan","clarity_gain","logic_flags"]}}}
+

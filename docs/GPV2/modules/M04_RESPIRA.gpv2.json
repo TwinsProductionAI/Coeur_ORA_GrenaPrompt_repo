@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_RESPIRA","CODE_POS":"M04","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"RESPIRA","CLIENT_ALIAS":"Flow Orchestrator","ROLE":"Orchestrer le cycle inhale hold exhale","FUNCTION":"Regule rythme, compression, budget tokens et forme de sortie","BUSINESS_FUNCTION":"Rend les reponses plus nettes et plus vendables","DEPENDS_ON":["M01","M02"],"USED_IN":["PRODUCTION"],"INPUTS":["intent_label","complexity_level","token_budget"],"OUTPUTS":["execution_mode","pace_profile","frontend_shape"]}}}
+

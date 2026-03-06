@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_GL_G","CODE_POS":"M21","VERSION":"1.0.0","TYPE":"PIPELINE_MODULE","GROUP":"S4","CLIENT_VISIBLE":false},"MODULE":{"NAME":"GL_G","CLIENT_ALIAS":"Index Compression Layer","ROLE":"Compresser, router et etiqueter de facon stable","FUNCTION":"Produit tags, index et clefs de reutilisation","BUSINESS_FUNCTION":"Facilite cache, maintenance et routage interne","DEPENDS_ON":["M16","M20"],"USED_IN":["PRODUCTION"],"INPUTS":["truth_map","index_map","routing_rules"],"OUTPUTS":["tag_pack","idx_key","route_map"]}}}
+

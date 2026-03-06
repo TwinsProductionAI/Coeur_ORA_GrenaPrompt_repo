@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_ARCH_PLUS","CODE_POS":"M10","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S2","CLIENT_VISIBLE":true},"MODULE":{"NAME":"ARCH_PLUS","CLIENT_ALIAS":"Persona Architecture","ROLE":"Construire la structure identitaire du client","FUNCTION":"Mappe persona, ton, posture, profondeur et risque","BUSINESS_FUNCTION":"Transforme un client flou en profil exploitable","DEPENDS_ON":["M13","M16"],"USED_IN":["ONBOARDING"],"INPUTS":["brand_context","offer_context","tone_preferences"],"OUTPUTS":["persona_sheet","coherence_warnings","profile_skeleton"]}}}
+

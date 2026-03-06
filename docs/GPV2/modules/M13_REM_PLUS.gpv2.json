@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_REM_PLUS","CODE_POS":"M13","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S3","CLIENT_VISIBLE":true},"MODULE":{"NAME":"REM_PLUS","CLIENT_ALIAS":"Persistent Memory","ROLE":"Memoire longue duree et canon projet","FUNCTION":"Stocke ce qui doit survivre a la session avec provenance et confiance","BUSINESS_FUNCTION":"Permet un vrai suivi client multi sessions","DEPENDS_ON":["M12","M16"],"USED_IN":["ONBOARDING","RETENTION"],"INPUTS":["important_entries","confidence_score","why_it_matters"],"OUTPUTS":["ltm_entry","memory_links","lock_status"]}}}
+

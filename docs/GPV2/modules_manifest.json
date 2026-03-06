@@ -1,0 +1,421 @@
+{
+    "gpv2":  {
+                 "meta":  {
+                              "id":  "ORA_CORE_OS_MODULES_MANIFEST",
+                              "version":  "1.0.0",
+                              "format":  "GPV2_INDEX",
+                              "source":  "docs/ORA_CORE_OS_22_Modules_GPV2.md",
+                              "module_count":  22,
+                              "install_order":  [
+                                                    "M01",
+                                                    "M02",
+                                                    "M03",
+                                                    "M04",
+                                                    "M05",
+                                                    "M06",
+                                                    "M07",
+                                                    "M08",
+                                                    "M09",
+                                                    "M10",
+                                                    "M11",
+                                                    "M12",
+                                                    "M13",
+                                                    "M14",
+                                                    "M15",
+                                                    "M16",
+                                                    "M17",
+                                                    "M18",
+                                                    "M19",
+                                                    "M20",
+                                                    "M21",
+                                                    "M22"
+                                                ]
+                          },
+                 "master_file":  "master_architecture.gpv2.json",
+                 "business_usage_file":  "business_usage.gpv2.json",
+                 "modules":  [
+                                 {
+                                     "code_pos":  "M01",
+                                     "id":  "MODULE_VOCAL_SI",
+                                     "name":  "VOCAL_SI",
+                                     "client_alias":  "Intent Router",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M02",
+                                                        "M04"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M01_VOCAL_SI.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M02",
+                                     "id":  "MODULE_LOCK",
+                                     "name":  "LOCK",
+                                     "client_alias":  "Constraint Gate",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY",
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M02_LOCK.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M03",
+                                     "id":  "MODULE_PRIMORDIA",
+                                     "name":  "PRIMORDIA",
+                                     "client_alias":  "Truth Tribunal",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M02",
+                                                        "M20"
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M03_PRIMORDIA.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M04",
+                                     "id":  "MODULE_RESPIRA",
+                                     "name":  "RESPIRA",
+                                     "client_alias":  "Flow Orchestrator",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M01",
+                                                        "M02"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M04_RESPIRA.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M05",
+                                     "id":  "MODULE_AURA_MXB",
+                                     "name":  "AURA_MXB",
+                                     "client_alias":  "Decision Scorecard",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M03",
+                                                        "M06",
+                                                        "M14"
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY",
+                                                     "ONBOARDING"
+                                                 ],
+                                     "path":  "modules/M05_AURA_MXB.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M06",
+                                     "id":  "MODULE_RIME",
+                                     "name":  "RIME",
+                                     "client_alias":  "Reasoning Compiler",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M03"
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M06_RIME.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M07",
+                                     "id":  "MODULE_MR_NET",
+                                     "name":  "MR_NET",
+                                     "client_alias":  "Noise Cleaner",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M03",
+                                                        "M09"
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M07_MR_NET.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M08",
+                                     "id":  "MODULE_MR_PROPRE",
+                                     "name":  "MR_PROPRE",
+                                     "client_alias":  "Risk Cleaner",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M03",
+                                                        "M09"
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M08_MR_PROPRE.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M09",
+                                     "id":  "MODULE_AUDIT",
+                                     "name":  "AUDIT",
+                                     "client_alias":  "Trace Layer",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S1",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+
+                                                    ],
+                                     "used_in":  [
+                                                     "QUALITY",
+                                                     "RETENTION"
+                                                 ],
+                                     "path":  "modules/M09_AUDIT.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M10",
+                                     "id":  "MODULE_ARCH_PLUS",
+                                     "name":  "ARCH_PLUS",
+                                     "client_alias":  "Persona Architecture",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S2",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M13",
+                                                        "M16"
+                                                    ],
+                                     "used_in":  [
+                                                     "ONBOARDING"
+                                                 ],
+                                     "path":  "modules/M10_ARCH_PLUS.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M11",
+                                     "id":  "MODULE_SONCAS",
+                                     "name":  "SONCAS",
+                                     "client_alias":  "Persuasion Matrix",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S2",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M10"
+                                                    ],
+                                     "used_in":  [
+                                                     "ONBOARDING",
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M11_SONCAS.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M12",
+                                     "id":  "MODULE_REM",
+                                     "name":  "REM",
+                                     "client_alias":  "Working Memory",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S3",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION",
+                                                     "RETENTION"
+                                                 ],
+                                     "path":  "modules/M12_REM.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M13",
+                                     "id":  "MODULE_REM_PLUS",
+                                     "name":  "REM_PLUS",
+                                     "client_alias":  "Persistent Memory",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S3",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M12",
+                                                        "M16"
+                                                    ],
+                                     "used_in":  [
+                                                     "ONBOARDING",
+                                                     "RETENTION"
+                                                 ],
+                                     "path":  "modules/M13_REM_PLUS.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M14",
+                                     "id":  "MODULE_ECHOTWIN",
+                                     "name":  "ECHOTWIN",
+                                     "client_alias":  "Mirror Feedback",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S3",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M13",
+                                                        "M09"
+                                                    ],
+                                     "used_in":  [
+                                                     "RETENTION"
+                                                 ],
+                                     "path":  "modules/M14_ECHOTWIN.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M15",
+                                     "id":  "MODULE_NEUTRINO",
+                                     "name":  "NEUTRINO",
+                                     "client_alias":  "Weak Signal Detector",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S3",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M14",
+                                                        "M09"
+                                                    ],
+                                     "used_in":  [
+                                                     "RETENTION",
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M15_NEUTRINO.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M16",
+                                     "id":  "MODULE_ORA_N6",
+                                     "name":  "ORA_N6",
+                                     "client_alias":  "Canon Indexer",
+                                     "type":  "CORE_MODULE",
+                                     "group":  "S3",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M09"
+                                                    ],
+                                     "used_in":  [
+                                                     "ONBOARDING",
+                                                     "RETENTION",
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M16_ORA_N6.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M17",
+                                     "id":  "MODULE_JSON",
+                                     "name":  "JSON",
+                                     "client_alias":  "Structured Container",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M01"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M17_JSON.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M18",
+                                     "id":  "MODULE_EN",
+                                     "name":  "EN",
+                                     "client_alias":  "Technical Layer",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M17"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M18_EN.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M19",
+                                     "id":  "MODULE_FR",
+                                     "name":  "FR",
+                                     "client_alias":  "Natural Voice Layer",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M10",
+                                                        "M11",
+                                                        "M17"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M19_FR.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M20",
+                                     "id":  "MODULE_GL",
+                                     "name":  "GL",
+                                     "client_alias":  "Truth Layer",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M02",
+                                                        "M03",
+                                                        "M17"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION",
+                                                     "QUALITY"
+                                                 ],
+                                     "path":  "modules/M20_GL.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M21",
+                                     "id":  "MODULE_GL_G",
+                                     "name":  "GL_G",
+                                     "client_alias":  "Index Compression Layer",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  false,
+                                     "depends_on":  [
+                                                        "M16",
+                                                        "M20"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M21_GL_G.gpv2.json"
+                                 },
+                                 {
+                                     "code_pos":  "M22",
+                                     "id":  "MODULE_NATIVE_FINAL",
+                                     "name":  "NATIVE_FINAL",
+                                     "client_alias":  "Actionable Output",
+                                     "type":  "PIPELINE_MODULE",
+                                     "group":  "S4",
+                                     "client_visible":  true,
+                                     "depends_on":  [
+                                                        "M18",
+                                                        "M19",
+                                                        "M20",
+                                                        "M21"
+                                                    ],
+                                     "used_in":  [
+                                                     "PRODUCTION"
+                                                 ],
+                                     "path":  "modules/M22_NATIVE_FINAL.gpv2.json"
+                                 }
+                             ]
+             }
+}
+

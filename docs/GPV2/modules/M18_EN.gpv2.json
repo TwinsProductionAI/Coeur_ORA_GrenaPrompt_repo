@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_EN","CODE_POS":"M18","VERSION":"1.0.0","TYPE":"PIPELINE_MODULE","GROUP":"S4","CLIENT_VISIBLE":false},"MODULE":{"NAME":"EN","CLIENT_ALIAS":"Technical Layer","ROLE":"Porter la logique technique et les contraintes machine","FUNCTION":"Formalise spec, timing, regles et structure operationnelle","BUSINESS_FUNCTION":"Donne une colonne vertebrale stable aux livrables","DEPENDS_ON":["M17"],"USED_IN":["PRODUCTION"],"INPUTS":["json_payload","technical_context"],"OUTPUTS":["technical_layer","machine_constraints"]}}}
+

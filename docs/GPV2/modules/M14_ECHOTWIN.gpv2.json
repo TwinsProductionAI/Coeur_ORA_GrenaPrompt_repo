@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_ECHOTWIN","CODE_POS":"M14","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S3","CLIENT_VISIBLE":false},"MODULE":{"NAME":"ECHOTWIN","CLIENT_ALIAS":"Mirror Feedback","ROLE":"Memoire miroir et boucle de retour","FUNCTION":"Observe ce qui marche, ce qui echoue et ce qui derive","BUSINESS_FUNCTION":"Transforme l usage en apprentissage operationnel","DEPENDS_ON":["M13","M09"],"USED_IN":["RETENTION"],"INPUTS":["outcomes","decisions","user_feedback"],"OUTPUTS":["pattern_map","feedback_loop","improvement_candidates"]}}}
+

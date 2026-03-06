@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_AURA_MXB","CODE_POS":"M05","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":true},"MODULE":{"NAME":"AURA_MXB","CLIENT_ALIAS":"Decision Scorecard","ROLE":"Equilibrer audace et rigueur","FUNCTION":"Produit une recommandation de type GO TEST WAIT NO","BUSINESS_FUNCTION":"Transforme l ideation en decision actionnable","DEPENDS_ON":["M03","M06","M14"],"USED_IN":["QUALITY","ONBOARDING"],"INPUTS":["hypothesis","risk_level","truth_score"],"OUTPUTS":["decision_scorecard","next_low_cost_test","main_risk"]}}}
+

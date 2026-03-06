@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_REM","CODE_POS":"M12","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S3","CLIENT_VISIBLE":false},"MODULE":{"NAME":"REM","CLIENT_ALIAS":"Working Memory","ROLE":"Memoire de travail de session","FUNCTION":"Conserve le contexte immediat sans le figer en canon","BUSINESS_FUNCTION":"Evite de reexpliquer le contexte a chaque etape","DEPENDS_ON":[],"USED_IN":["PRODUCTION","RETENTION"],"INPUTS":["session_events","active_context"],"OUTPUTS":["working_memory_state","context_window"]}}}
+

@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_MR_PROPRE","CODE_POS":"M08","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"MR_PROPRE","CLIENT_ALIAS":"Risk Cleaner","ROLE":"Nettoyer les fragments a risque","FUNCTION":"Met en quarantaine les morceaux ambigus ou instables","BUSINESS_FUNCTION":"Ajoute un filet de securite avant promotion ou sortie finale","DEPENDS_ON":["M03","M09"],"USED_IN":["QUALITY"],"INPUTS":["risky_fragments","risk_score"],"OUTPUTS":["quarantine_list","cleaning_plan","release_status"]}}}
+

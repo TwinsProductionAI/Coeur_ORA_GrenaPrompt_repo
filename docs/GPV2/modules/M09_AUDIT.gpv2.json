@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_AUDIT","CODE_POS":"M09","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":true},"MODULE":{"NAME":"AUDIT","CLIENT_ALIAS":"Trace Layer","ROLE":"Journaliser les decisions et hypotheses","FUNCTION":"Trace les changements, risques, verdicts et points de preuve","BUSINESS_FUNCTION":"Rend le systeme plus credible en B2B","DEPENDS_ON":[],"USED_IN":["QUALITY","RETENTION"],"INPUTS":["events","decisions","risk_flags"],"OUTPUTS":["audit_log","trace_summary","review_points"]}}}
+

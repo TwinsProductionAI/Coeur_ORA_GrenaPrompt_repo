@@ -1,0 +1,2 @@
+{"GPV2":{"META":{"ID":"MODULE_PRIMORDIA","CODE_POS":"M03","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S1","CLIENT_VISIBLE":false},"MODULE":{"NAME":"PRIMORDIA","CLIENT_ALIAS":"Truth Tribunal","ROLE":"Arbitre verite, coherence et ethique","FUNCTION":"Peut autoriser, modifier, demander preuve ou bloquer","BUSINESS_FUNCTION":"Reduit le risque d hallucination et augmente la fiabilite percue","DEPENDS_ON":["M02","M20"],"USED_IN":["QUALITY"],"INPUTS":["claims","constraints","risk_flags"],"OUTPUTS":["decision","severity","required_edits"]}}}
+
