@@ -1,4 +1,4 @@
-# ORA_CORE_OS Public Spec
+﻿# ORA_CORE_OS Public Spec
 
 ## Status
 
@@ -21,15 +21,15 @@ Scope of this document:
 It is not published here as:
 - a visual asset repository
 - a general ORA archive
-- a mixed-content brand repository
 - an executable runtime package
+- a multi-project bundle
 
 ## Canonical Public Files
 
 The canonical public files are:
 1. [ORA_CORE_OS_22_Modules_GPV2.md](ORA_CORE_OS_22_Modules_GPV2.md)
 2. [GPV2/master_architecture.gpv2.json](GPV2/master_architecture.gpv2.json)
-3. [GPV2/business_usage.gpv2.json](GPV2/business_usage.gpv2.json)
+3. [GPV2/usage_map.gpv2.json](GPV2/usage_map.gpv2.json)
 4. [GPV2/modules_manifest.json](GPV2/modules_manifest.json)
 5. [GPV2/modules/README.md](GPV2/modules/README.md)
 6. [INSTALL_MANUAL_GPV2.md](INSTALL_MANUAL_GPV2.md)
@@ -47,9 +47,9 @@ ORA_CORE_OS is organized in 4 section groups.
 - truth gates
 - quality and audit controls
 
-`S2 - POSITIONNEMENT_PERSUASION`
-- persona shaping
-- persuasion weighting
+`S2 - POSITIONNEMENT_SIGNALISATION`
+- profile shaping
+- priority shaping
 
 `S3 - MEMOIRE_APPRENTISSAGE`
 - working memory
@@ -88,6 +88,7 @@ These rules define the public behavior of ORA_CORE_OS in this repository:
 5. `GL` is the truth and uncertainty layer.
 6. `GPV2` files are the installable source of truth.
 7. The public repo must stay limited to ORA_CORE_OS.
+8. Public docs must remain synchronized with the canonical files.
 
 ## Install Surfaces
 
@@ -97,7 +98,7 @@ This repository supports three public install surfaces:
 - install the master architecture
 - install the 22 modules in `CODE_POS` order
 - wire dependencies
-- validate business blocks
+- validate usage blocks
 
 `Custom GPT`
 - upload the ORA_CORE_OS GPV2 knowledge files
@@ -107,31 +108,15 @@ This repository supports three public install surfaces:
 `Modular Project`
 - keep one file per module
 - use the manifest as routing and install reference
-- preserve section grouping and business mapping
-
-## Business Interpretation
-
-The 22-module architecture should not be sold publicly as 22 separate offers.
-
-Public reading:
-- one system
-- one installation path
-- one client-facing output layer
-
-Internal reading:
-- 22 modules
-- 4 section groups
-- explicit dependencies
-- explicit truth and memory controls
+- preserve section grouping and usage mapping
 
 ## Public Exclusions
 
 The public repository must exclude:
 - unrelated image libraries
-- character galleries
-- UI exploration dumps
 - side documentation outside ORA_CORE_OS
-- mixed-scope project material
+- non-core project bundles
+- materials that are not required to install or study ORA_CORE_OS
 
 ## Recommended Verification
 
@@ -141,7 +126,7 @@ A public ORA_CORE_OS install is considered coherent if:
 3. the manifest points to every module file
 4. `CODE_POS` order is stable
 5. `NATIVE_FINAL` obeys `GL`
-6. business blocks map cleanly to the module graph
+6. usage blocks map cleanly to the module graph
 
 ## Versioning Rule
 

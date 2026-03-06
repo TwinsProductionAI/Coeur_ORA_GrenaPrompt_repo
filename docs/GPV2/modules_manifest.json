@@ -1,8 +1,8 @@
-{
+﻿{
     "gpv2":  {
                  "meta":  {
                               "id":  "ORA_CORE_OS_MODULES_MANIFEST",
-                              "version":  "1.0.0",
+                              "version":  "1.1.0",
                               "format":  "GPV2_INDEX",
                               "source":  "docs/ORA_CORE_OS_22_Modules_GPV2.md",
                               "module_count":  22,
@@ -32,7 +32,7 @@
                                                 ]
                           },
                  "master_file":  "master_architecture.gpv2.json",
-                 "business_usage_file":  "business_usage.gpv2.json",
+                 "usage_map_file":  "usage_map.gpv2.json",
                  "modules":  [
                                  {
                                      "code_pos":  "M01",
@@ -192,7 +192,7 @@
                                      "code_pos":  "M10",
                                      "id":  "MODULE_ARCH_PLUS",
                                      "name":  "ARCH_PLUS",
-                                     "client_alias":  "Persona Architecture",
+                                     "client_alias":  "Profile Architecture",
                                      "type":  "CORE_MODULE",
                                      "group":  "S2",
                                      "client_visible":  true,
@@ -201,15 +201,15 @@
                                                         "M16"
                                                     ],
                                      "used_in":  [
-                                                     "ONBOARDING"
+                                                     "SETUP"
                                                  ],
                                      "path":  "modules/M10_ARCH_PLUS.gpv2.json"
                                  },
                                  {
                                      "code_pos":  "M11",
-                                     "id":  "MODULE_SONCAS",
-                                     "name":  "SONCAS",
-                                     "client_alias":  "Persuasion Matrix",
+                                     "id":  "MODULE_PRIORITY_MATRIX",
+                                     "name":  "PRIORITY_MATRIX",
+                                     "client_alias":  "Priority Matrix",
                                      "type":  "CORE_MODULE",
                                      "group":  "S2",
                                      "client_visible":  true,
@@ -217,10 +217,10 @@
                                                         "M10"
                                                     ],
                                      "used_in":  [
-                                                     "ONBOARDING",
-                                                     "PRODUCTION"
+                                                     "SETUP",
+                                                     "EXECUTION"
                                                  ],
-                                     "path":  "modules/M11_SONCAS.gpv2.json"
+                                     "path":  "modules/M11_PRIORITY_MATRIX.gpv2.json"
                                  },
                                  {
                                      "code_pos":  "M12",
@@ -356,7 +356,7 @@
                                                         "M17"
                                                     ],
                                      "used_in":  [
-                                                     "PRODUCTION"
+                                                     "EXECUTION"
                                                  ],
                                      "path":  "modules/M19_FR.gpv2.json"
                                  },
@@ -418,4 +418,3 @@
                              ]
              }
 }
-

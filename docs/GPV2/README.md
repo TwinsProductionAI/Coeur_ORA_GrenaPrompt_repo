@@ -1,14 +1,14 @@
-# GPV2 Index
+﻿# GPV2 Index
 
-This folder contains the modular GPV2 release for `ORA CORE OS`.
+This folder contains the modular GPV2 release for `ORA_CORE_OS`.
 
 ## Files
 
 - [master_architecture.gpv2.json](master_architecture.gpv2.json)
-Top-level architecture, section grouping, and business blocks.
+Top-level architecture, section grouping, and usage blocks.
 
-- [business_usage.gpv2.json](business_usage.gpv2.json)
-Business-facing block mapping for onboarding, production, quality, and retention.
+- [usage_map.gpv2.json](usage_map.gpv2.json)
+Neutral runtime block mapping for setup, execution, control, and memory.
 
 - [modules_manifest.json](modules_manifest.json)
 Machine-readable index of all 22 modules.
@@ -22,13 +22,14 @@ Follow this order:
 1. `master_architecture.gpv2.json`
 2. `modules_manifest.json`
 3. `modules/M01_...` through `modules/M22_...`
-4. `business_usage.gpv2.json`
+4. `usage_map.gpv2.json`
 5. [../INSTALL_MANUAL_GPV2.md](../INSTALL_MANUAL_GPV2.md)
+6. [../INSTALL_CUSTOM_GPT.md](../INSTALL_CUSTOM_GPT.md)
 
 ## Sections
 
 - `S1` orchestration and governance
-- `S2` positioning and persuasion
+- `S2` positioning and signal shaping
 - `S3` memory and learning
 - `S4` production pipeline
 
@@ -37,4 +38,4 @@ Follow this order:
 - `CODE_POS` is the canonical install order.
 - `CLIENT_VISIBLE` marks which modules can be surfaced externally.
 - `DEPENDS_ON` should be respected during manual installation.
-
+- keep `master_architecture`, `usage_map`, and the module files synchronized.

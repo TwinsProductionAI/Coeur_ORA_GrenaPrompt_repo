@@ -1,24 +1,23 @@
-# ORA_CORE_OS
+﻿# ORA_CORE_OS
 
-`ORA_CORE_OS` is a modular architecture specification for building a structured AI copilot from `GPV2` components.
+`ORA_CORE_OS` is a modular architecture specification for building a structured AI system from `GPV2` components.
 
 This public repository is intentionally scoped to one thing only:
 - the `ORA_CORE_OS` architecture
-
-It does not aim to publish unrelated visual assets, side experiments, or broader project history.
+- its installable GPV2 documentation
 
 ## What ORA_CORE_OS Is
 
 `ORA_CORE_OS` defines a 22-module operating architecture organized into 4 section groups:
 - orchestration and governance
-- positioning and persuasion
+- positioning and signal shaping
 - memory and learning
 - production pipeline
 
 The public interpretation of that architecture is simple:
 - one modular system
 - one install path
-- one client-facing output layer
+- one consistent output layer
 
 ## Public Positioning
 
@@ -28,14 +27,14 @@ The strongest public reading of this repository is:
 - a modular GPV2 reference
 
 The internal complexity stays in GPV2.
-The public surface stays readable.
+The public surface stays technical and readable.
 
 ## Core Reading Order
 
 1. [docs/ORA_CORE_OS_PUBLIC_SPEC.md](docs/ORA_CORE_OS_PUBLIC_SPEC.md)
-2. [docs/ORA_CORE_OS_Architecture_22_Modules_Offre_Client.md](docs/ORA_CORE_OS_Architecture_22_Modules_Offre_Client.md)
-3. [docs/INSTALL_MANUAL_GPV2.md](docs/INSTALL_MANUAL_GPV2.md)
-4. [docs/INSTALL_CUSTOM_GPT.md](docs/INSTALL_CUSTOM_GPT.md)
+2. [docs/INSTALL_MANUAL_GPV2.md](docs/INSTALL_MANUAL_GPV2.md)
+3. [docs/INSTALL_CUSTOM_GPT.md](docs/INSTALL_CUSTOM_GPT.md)
+4. [docs/ORA_CORE_OS_22_Modules_GPV2.md](docs/ORA_CORE_OS_22_Modules_GPV2.md)
 5. [docs/GPV2/README.md](docs/GPV2/README.md)
 6. [docs/GPV2/modules_manifest.json](docs/GPV2/modules_manifest.json)
 7. [docs/GPV2/modules/README.md](docs/GPV2/modules/README.md)
@@ -44,9 +43,6 @@ The public surface stays readable.
 
 - [docs/ORA_CORE_OS_PUBLIC_SPEC.md](docs/ORA_CORE_OS_PUBLIC_SPEC.md)
 Public reference spec for scope, invariants, structure, and install rules.
-
-- [docs/ORA_CORE_OS_Architecture_22_Modules_Offre_Client.md](docs/ORA_CORE_OS_Architecture_22_Modules_Offre_Client.md)
-Business-facing reading of the 22-module architecture.
 
 - [docs/ORA_CORE_OS_22_Modules_GPV2.md](docs/ORA_CORE_OS_22_Modules_GPV2.md)
 Single-file GPV2 reference for the full architecture.
@@ -70,7 +66,7 @@ Human-readable module index.
 
 Section groups:
 - `S1` orchestration and governance
-- `S2` positioning and persuasion
+- `S2` positioning and signal shaping
 - `S3` memory and learning
 - `S4` production pipeline
 

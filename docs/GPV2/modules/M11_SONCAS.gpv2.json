@@ -1,2 +1,0 @@
-{"GPV2":{"META":{"ID":"MODULE_SONCAS","CODE_POS":"M11","VERSION":"1.0.0","TYPE":"CORE_MODULE","GROUP":"S2","CLIENT_VISIBLE":true},"MODULE":{"NAME":"SONCAS","CLIENT_ALIAS":"Persuasion Matrix","ROLE":"Pondrer les leviers de persuasion","FUNCTION":"Active Securite Orgueil Nouveaute Confort Argent Sympathie selon le contexte","BUSINESS_FUNCTION":"Ameliore l impact commercial sans perdre la coherence de marque","DEPENDS_ON":["M10"],"USED_IN":["ONBOARDING","PRODUCTION"],"INPUTS":["persona_sheet","offer_type","sales_context"],"OUTPUTS":["weights","priority_order","tone_tuning"]}}}
-

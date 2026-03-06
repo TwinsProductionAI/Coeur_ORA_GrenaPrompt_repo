@@ -1,6 +1,8 @@
-# GPV2 Modules Index
+﻿# Module Index
 
-One file per module, ordered by `CODE_POS`.
+This folder contains one `GPV2` file per `ORA_CORE_OS` module.
+
+## Modules
 
 - `M01` [VOCAL_SI](M01_VOCAL_SI.gpv2.json) : Intent Router | group `S1`
 - `M02` [LOCK](M02_LOCK.gpv2.json) : Constraint Gate | group `S1`
@@ -11,8 +13,8 @@ One file per module, ordered by `CODE_POS`.
 - `M07` [MR_NET](M07_MR_NET.gpv2.json) : Noise Cleaner | group `S1`
 - `M08` [MR_PROPRE](M08_MR_PROPRE.gpv2.json) : Risk Cleaner | group `S1`
 - `M09` [AUDIT](M09_AUDIT.gpv2.json) : Trace Layer | group `S1`
-- `M10` [ARCH_PLUS](M10_ARCH_PLUS.gpv2.json) : Persona Architecture | group `S2`
-- `M11` [SONCAS](M11_SONCAS.gpv2.json) : Persuasion Matrix | group `S2`
+- `M10` [ARCH_PLUS](M10_ARCH_PLUS.gpv2.json) : Profile Architecture | group `S2`
+- `M11` [PRIORITY_MATRIX](M11_PRIORITY_MATRIX.gpv2.json) : Priority Matrix | group `S2`
 - `M12` [REM](M12_REM.gpv2.json) : Working Memory | group `S3`
 - `M13` [REM_PLUS](M13_REM_PLUS.gpv2.json) : Persistent Memory | group `S3`
 - `M14` [ECHOTWIN](M14_ECHOTWIN.gpv2.json) : Mirror Feedback | group `S3`
@@ -25,3 +27,8 @@ One file per module, ordered by `CODE_POS`.
 - `M21` [GL_G](M21_GL_G.gpv2.json) : Index Compression Layer | group `S4`
 - `M22` [NATIVE_FINAL](M22_NATIVE_FINAL.gpv2.json) : Actionable Output | group `S4`
 
+## Notes
+
+- `CODE_POS` is the canonical install order.
+- `DEPENDS_ON` defines required upstream module links.
+- `USED_IN` shows the main runtime blocks for each module.
