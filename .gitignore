@@ -1,0 +1,11 @@
+# Keep the public repository scoped to ORA_CORE_OS only
+
+docs/BG DREAMORA/
+docs/ORA CHARACTERS/
+docs/UI/
+docs/ChatGPT Image *.png
+docs/Interface du syst*HALO*
+docs/Architecture_et_Commandes.md
+docs/Chronologie_ORA.md
+docs/FGP_GrenaPrompt.md
+
