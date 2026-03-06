@@ -2,7 +2,7 @@
     "gpv2":  {
                  "meta":  {
                               "id":  "ORA_CORE_OS_MODULES_MANIFEST",
-                              "version":  "1.1.0",
+                              "version":  "1.2.0",
                               "format":  "GPV2_INDEX",
                               "source":  "docs/ORA_CORE_OS_22_Modules_GPV2.md",
                               "module_count":  22,
@@ -29,7 +29,8 @@
                                                     "M20",
                                                     "M21",
                                                     "M22"
-                                                ]
+                                                ],
+                              "annex_manifest_file":  "annexes_manifest.json"
                           },
                  "master_file":  "master_architecture.gpv2.json",
                  "usage_map_file":  "usage_map.gpv2.json",
@@ -415,6 +416,23 @@
                                                  ],
                                      "path":  "modules/M22_NATIVE_FINAL.gpv2.json"
                                  }
-                             ]
+                             ],
+                 "annex_modules":  [
+                                       {
+                                           "code_pos":  "AX01",
+                                           "id":  "MODULE_GIBBERLINK_GLYPH",
+                                           "name":  "GIBBERLINK_GLYPH",
+                                           "client_alias":  "Glyph Bridge",
+                                           "type":  "ANNEX_MODULE",
+                                           "optional":  true,
+                                           "extends":  [
+                                                           "M21"
+                                                       ],
+                                           "used_in":  [
+                                                           "PRODUCTION"
+                                                       ],
+                                           "path":  "annexes/AX01_GIBBERLINK_GLYPH.gpv2.json"
+                                       }
+                                   ]
              }
 }

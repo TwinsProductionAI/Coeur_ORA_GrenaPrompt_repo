@@ -13,10 +13,16 @@ Top-level architecture, section grouping, and usage blocks.
 Neutral runtime block mapping for setup, execution, control, and memory.
 
 - [modules_manifest.json](modules_manifest.json)
-Machine-readable index of all 22 modules.
+Machine-readable index of the `22` core modules.
+
+- [annexes_manifest.json](annexes_manifest.json)
+Machine-readable index of optional public annex modules.
 
 - [modules/README.md](modules/README.md)
-One GPV2 file per module.
+One GPV2 file per core module.
+
+- [annexes/README.md](annexes/README.md)
+Optional extensions that do not change the core `22`.
 
 ## Installation Order
 
@@ -25,8 +31,9 @@ Follow this order:
 2. `modules_manifest.json`
 3. `modules/M01_...` through `modules/M22_...`
 4. `usage_map.gpv2.json`
-5. [../INSTALL_MANUAL_GPV2.md](../INSTALL_MANUAL_GPV2.md)
-6. [../INSTALL_CUSTOM_GPT.md](../INSTALL_CUSTOM_GPT.md)
+5. optional: `annexes_manifest.json` then `annexes/AX...`
+6. [../INSTALL_MANUAL_GPV2.md](../INSTALL_MANUAL_GPV2.md)
+7. [../INSTALL_CUSTOM_GPT.md](../INSTALL_CUSTOM_GPT.md)
 
 ## Sections
 
@@ -37,7 +44,9 @@ Follow this order:
 
 ## Notes
 
-- `CODE_POS` is the canonical install order.
-- `CLIENT_VISIBLE` marks which modules can be surfaced externally.
+- `CODE_POS` is the canonical install order for the core system.
+- `AX` positions are optional annex extensions.
+- `CLIENT_VISIBLE` marks which core modules can be surfaced externally.
 - `DEPENDS_ON` should be respected during manual installation.
-- keep `master_architecture`, `usage_map`, and the module files synchronized.
+- annexes must not modify the `M01 -> M22` core graph.
+- keep `master_architecture`, `usage_map`, the core module files, and annex files synchronized.

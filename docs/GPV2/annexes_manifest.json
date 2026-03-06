@@ -1,0 +1,31 @@
+﻿{
+  "gpv2": {
+    "meta": {
+      "id": "ORA_CORE_OS_ANNEXES_MANIFEST",
+      "version": "1.0.0",
+      "format": "GPV2_INDEX",
+      "core_manifest": "modules_manifest.json",
+      "annex_count": 1,
+      "policy": [
+        "core_module_count_remains_22",
+        "annexes_do_not_change_core_install_order",
+        "annexes_must_declare_extension_target",
+        "annexes_are_optional"
+      ]
+    },
+    "annexes": [
+      {
+        "code_pos": "AX01",
+        "id": "MODULE_GIBBERLINK_GLYPH",
+        "name": "GIBBERLINK_GLYPH",
+        "client_alias": "Glyph Bridge",
+        "type": "ANNEX_MODULE",
+        "optional": true,
+        "extends": ["M21"],
+        "used_in": ["PRODUCTION"],
+        "path": "annexes/AX01_GIBBERLINK_GLYPH.gpv2.json",
+        "note": "Optional annex extending M21_GL_G without changing the 22-core module graph."
+      }
+    ]
+  }
+}

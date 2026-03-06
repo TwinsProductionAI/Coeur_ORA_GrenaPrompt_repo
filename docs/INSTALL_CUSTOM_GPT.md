@@ -10,13 +10,14 @@ This guide uses only the ORA_CORE_OS documents published in this repository.
 
 The goal is to build a Custom GPT that:
 - uses ORA_CORE_OS as its architecture base
-- respects the 22-module GPV2 structure
+- respects the 22-module GPV2 core structure
 - keeps the same truth, dependency, and output rules
 - stays aligned with the published ORA_CORE_OS files
+- can optionally load annex modules without changing the core count
 
 ## Files To Use
 
-Use only these knowledge files:
+Use these core knowledge files:
 1. [GPV2/master_architecture.gpv2.json](GPV2/master_architecture.gpv2.json)
 2. [GPV2/usage_map.gpv2.json](GPV2/usage_map.gpv2.json)
 3. [GPV2/modules_manifest.json](GPV2/modules_manifest.json)
@@ -43,6 +44,9 @@ Use only these knowledge files:
 24. [GPV2/modules/M21_GL_G.gpv2.json](GPV2/modules/M21_GL_G.gpv2.json)
 25. [GPV2/modules/M22_NATIVE_FINAL.gpv2.json](GPV2/modules/M22_NATIVE_FINAL.gpv2.json)
 
+Optional knowledge file after the core upload is stable:
+26. [GPV2/annexes/AX01_GIBBERLINK_GLYPH.gpv2.json](GPV2/annexes/AX01_GIBBERLINK_GLYPH.gpv2.json)
+
 Upload only the ORA_CORE_OS files listed above.
 
 ## Recommended Custom GPT Setup
@@ -59,8 +63,9 @@ For a first installation, you do not need custom actions.
 Upload in this order:
 1. `master_architecture.gpv2.json`
 2. `modules_manifest.json`
-3. all 22 module files in `CODE_POS` order
+3. all 22 core module files in `CODE_POS` order
 4. `usage_map.gpv2.json`
+5. optional: `AX01_GIBBERLINK_GLYPH.gpv2.json` only if you want the glyph extension
 
 This order reduces ambiguity and keeps the master architecture above module-level detail.
 
@@ -72,28 +77,30 @@ Use a system instruction similar to this:
 You operate strictly from ORA_CORE_OS.
 Use only the ORA_CORE_OS GPV2 knowledge uploaded to this GPT.
 Treat GPV2 as the structural source of truth.
-Respect the 22 modules and their CODE_POS ordering from M01 to M22.
+Respect the 22 core modules and their CODE_POS ordering from M01 to M22.
 Respect DEPENDS_ON when composing behavior.
 Use USAGE_BLOCKS and USED_IN to map requests to the right functional path.
-Do not invent extra modules, extra architecture, or external lore.
+Do not invent extra core modules, extra architecture, or external lore.
 Keep outputs consistent with the truth constraints of GL.
 NATIVE_FINAL must not introduce facts unsupported by GL.
 If required information is missing, state uncertainty clearly instead of inventing certainty.
 Keep the external behavior simpler than the internal architecture.
+If AX01 GIBBERLINK_GLYPH is uploaded, treat it as an optional extension of M21_GL_G, not as a new core module.
 ```
 
 ## Recommended Behavior Policy
 
 The Custom GPT should behave like this:
 - use ORA_CORE_OS only
-- route through the published module graph
+- route through the published core module graph
 - keep public language clear and usable
 - expose simple outputs, not raw architectural complexity
 - preserve uncertainty tags when facts are missing
+- treat annexes as optional overlays, never as stealth replacements of the core
 
 ## Recommended Install Logic
 
-Map incoming requests using these public blocks:
+Map incoming requests using these public core blocks:
 
 `SETUP`
 - `M10 M11 M13 M16`
@@ -107,6 +114,10 @@ Map incoming requests using these public blocks:
 `MEMORY`
 - `M12 M13 M14 M15 M16`
 
+Optional annex logic:
+- if `AX01 GIBBERLINK_GLYPH` is present, allow it to extend `M21_GL_G`
+- do not let `AX01` change the core `22` ordering or replace `GL`
+
 ## What Not To Do In Custom GPT
 
 Do not:
@@ -114,6 +125,7 @@ Do not:
 - bypass `GL` when producing final outputs
 - skip `CODE_POS` and dependency logic completely
 - expose the full internal complexity unless explicitly needed
+- treat an annex as if it were an extra mandatory core module
 
 ## Validation Tests
 
@@ -139,6 +151,11 @@ Expected result:
 - simple public explanation
 - not a lore dump
 
+5. `If AX01 is loaded, what does it change?`
+Expected result:
+- it is described as an optional extension of `M21_GL_G`
+- it is not described as `M23`
+
 ## Minimum Viable Custom GPT Install
 
 If file count is a problem, minimum recommended upload set:
@@ -163,6 +180,7 @@ Keep the Custom GPT aligned with these files whenever the repo changes:
 - `master_architecture.gpv2.json`
 - `usage_map.gpv2.json`
 - `modules_manifest.json`
-- split module files
+- split core module files
+- annex files if you actually load annexes
 
 If those drift apart, the GPT install will become interpretive instead of controlled.

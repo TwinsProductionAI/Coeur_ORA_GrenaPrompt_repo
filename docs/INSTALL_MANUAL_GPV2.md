@@ -10,10 +10,11 @@ This is a manual installation guide, not an automated installer.
 
 The goal is to reproduce a working structured setup with:
 - one coherent master configuration
-- 22 internal modules
+- 22 internal core modules
 - a clear reading and execution order
 - stable memory and quality gates
 - a consistent output layer
+- optional annex extensions only if you need them
 
 ## What You Need Before Installing
 
@@ -26,8 +27,9 @@ Recommended setup:
 1. one master project for `ORA_CORE_OS`
 2. one folder for `GPV2` documents
 3. one file or prompt for the master architecture
-4. one file per module
+4. one file per core module
 5. one manifest file for module order and dependencies
+6. one optional annex folder for non-core extensions
 
 ## Source Files To Use
 
@@ -38,15 +40,20 @@ Read and install from these files:
 4. [GPV2/modules/README.md](GPV2/modules/README.md)
 5. [GPV2/usage_map.gpv2.json](GPV2/usage_map.gpv2.json)
 
+Optional after the core install is coherent:
+6. [GPV2/annexes_manifest.json](GPV2/annexes_manifest.json)
+7. [GPV2/annexes/README.md](GPV2/annexes/README.md)
+
 ## Installation Model
 
 The recommended manual installation model is:
 1. install the master architecture
 2. install the 4 section groups
-3. install the 22 modules in code order
-4. wire module dependencies
+3. install the 22 core modules in code order
+4. wire core module dependencies
 5. validate usage blocks
 6. test end-to-end outputs
+7. only then install optional annexes if needed
 
 ## Step 1 - Install the Master Architecture
 
@@ -74,7 +81,7 @@ Create these four groups exactly:
 
 Do not flatten the system too early. The section grouping is what keeps the system readable.
 
-## Step 3 - Install the 22 Modules In Order
+## Step 3 - Install the 22 Core Modules In Order
 
 Install in this order:
 1. `M01 VOCAL_SI`
@@ -100,16 +107,29 @@ Install in this order:
 21. `M21 GL_G`
 22. `M22 NATIVE_FINAL`
 
+## Step 3B - Optional Annexes After The Core
+
+Install annexes only after the 22-core base is coherent.
+
+Current optional annex:
+1. `AX01 GIBBERLINK_GLYPH`
+
+Rule for `AX01`:
+- it extends `M21_GL_G`
+- it does not replace `M21_GL_G`
+- it does not become `M23`
+- it remains optional
+
 ## Step 4 - Respect Dependency Wiring
 
-Each module file declares:
+Each core module file declares:
 - `DEPENDS_ON`
 - `USED_IN`
 - `INPUTS`
 - `OUTPUTS`
 
 Manual installation rule:
-- do not activate a module if its required upstream dependencies are missing
+- do not activate a core module if its required upstream dependencies are missing
 - do not expose a public workflow until `CONTROL` and `MEMORY` paths are defined
 
 Critical dependency paths:
@@ -117,6 +137,7 @@ Critical dependency paths:
 2. `LOCK -> PRIMORDIA -> RIME -> MR_NET/MR_PROPRE -> AUDIT`
 3. `ARCH_PLUS -> PRIORITY_MATRIX -> FR`
 4. `REM -> REM_PLUS -> ECHOTWIN -> NEUTRINO -> ORA_N6`
+5. optional annex path: `M21 GL_G -> AX01 GIBBERLINK_GLYPH` when glyph/phonetic extension is needed
 
 ## Step 5 - Configure the 4 Usage Blocks
 
@@ -150,6 +171,10 @@ The public surface should present:
 - one quality layer
 - one consistent output layer
 
+Annex rule:
+- annexes may enrich the system
+- annexes must not redefine the public core by stealth
+
 ## Step 7 - Validate The Installation
 
 Validation checklist:
@@ -158,6 +183,7 @@ Validation checklist:
 3. `CONTROL` can flag uncertainty and risky claims
 4. `MEMORY` can preserve useful information between runs
 5. `NATIVE_FINAL` does not invent facts outside `GL`
+6. optional annexes can be removed without breaking the 22-core base
 
 ## Step 8 - Recommended Manual Tests
 
@@ -167,6 +193,7 @@ Run these tests after installation:
 3. generate one structured output and confirm `FR` respects `ARCH_PLUS` and `PRIORITY_MATRIX`
 4. store one persistent project fact and confirm `REM_PLUS` and `ORA_N6` can recover it
 5. generate one final output and confirm `NATIVE_FINAL` adds no unsupported facts
+6. if `AX01` is installed, confirm it extends `M21_GL_G` without changing the core install order
 
 ## Minimum Viable Manual Installation
 
@@ -189,8 +216,9 @@ This is the smallest coherent ORA_CORE_OS base.
 Keep these synchronized:
 1. master architecture file
 2. usage map file
-3. modules manifest
-4. one file per module
-5. installation guides
+3. core modules manifest
+4. one file per core module
+5. annex manifest if annexes are used
+6. installation guides
 
 If these drift apart, the installation becomes interpretive instead of reliable.

@@ -1,5 +1,7 @@
 ﻿# ORA_CORE_OS 22 Modules GPV2
 
+Core reference only. Optional annex extensions live under docs/GPV2/annexes/ and do not change the canonical 22-module count or the M01 -> M22 install order.
+
 ## MASTER
 
 ```json
@@ -145,3 +147,4 @@
 ```json
 {"GPV2":{"META":{"ID":"ORA_CORE_OS_USAGE_MAP","VERSION":"1.0.0","TYPE":"RUNTIME_MAP","OWNER":"Xavier_Fleriag"},"USAGE":{"SETUP":{"VISIBLE_LABEL":"System setup","MODULES":["M10","M11","M13","M16"],"DELIVERABLES":["profile_sheet","priority_map","memory_base","canon_index"]},"EXECUTION":{"VISIBLE_LABEL":"Structured execution","MODULES":["M01","M04","M17","M18","M19","M20","M21","M22"],"DELIVERABLES":["summaries","drafts","output_packages","checklists"]},"CONTROL":{"VISIBLE_LABEL":"Quality control","MODULES":["M02","M03","M05","M06","M07","M08","M09"],"DELIVERABLES":["quality_gate","truth_check","audit_trace","risk_cleanup"]},"MEMORY":{"VISIBLE_LABEL":"Memory continuity","MODULES":["M12","M13","M14","M15","M16"],"DELIVERABLES":["memory_state","pattern_map","weak_signals","canon_updates"]}}}}
 ```
+

@@ -1,8 +1,8 @@
 ﻿# Module Index
 
-This folder contains one `GPV2` file per `ORA_CORE_OS` module.
+This folder contains one `GPV2` file per `ORA_CORE_OS` core module.
 
-## Modules
+## Core Modules
 
 - `M01` [VOCAL_SI](M01_VOCAL_SI.gpv2.json) : Intent Router | group `S1`
 - `M02` [LOCK](M02_LOCK.gpv2.json) : Constraint Gate | group `S1`
@@ -27,8 +27,16 @@ This folder contains one `GPV2` file per `ORA_CORE_OS` module.
 - `M21` [GL_G](M21_GL_G.gpv2.json) : Index Compression Layer | group `S4`
 - `M22` [NATIVE_FINAL](M22_NATIVE_FINAL.gpv2.json) : Actionable Output | group `S4`
 
+## Optional Annexes
+
+Optional annexes live in [../annexes/README.md](../annexes/README.md).
+
+Current annex:
+- `AX01` `GIBBERLINK_GLYPH` : extends `M21_GL_G` without changing the core `22`
+
 ## Notes
 
-- `CODE_POS` is the canonical install order.
+- `CODE_POS` is the canonical install order for the core `22`.
 - `DEPENDS_ON` defines required upstream module links.
-- `USED_IN` shows the main runtime blocks for each module.
+- `USED_IN` shows the main runtime blocks for each core module.
+- annex modules are optional and must not be renumbered as `M23+` unless the public architecture itself changes.
