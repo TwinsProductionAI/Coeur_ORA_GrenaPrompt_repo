@@ -1,0 +1,36 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .label {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 44px;
+      fill: #0D6262;
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+  </style>
+
+  <!-- 0% -->
+  <rect x="120" y="90" width="784" height="72" rx="36" ry="36"
+        fill="none" stroke="#0D6262" stroke-width="6"/>
+  <!-- texte qui chevauche légèrement -->
+  <text x="512" y="138" text-anchor="middle" class="label">HALO_ORA</text>
+
+  <!-- 25% -->
+  <rect x="120" y="270" width="784" height="72" rx="36" ry="36"
+        fill="#CDEFEA" stroke="#0D6262" stroke-width="6"/>
+  <rect x="120" y="270" width="196" height="72" rx="36" ry="36"
+        fill="#1B9D91"/>
+  <text x="512" y="318" text-anchor="middle" class="label">HALO_ORA</text>
+
+  <!-- 50% -->
+  <rect x="120" y="450" width="784" height="72" rx="36" ry="36"
+        fill="#CDEFEA" stroke="#0D6262" stroke-width="6"/>
+  <rect x="120" y="450" width="392" height="72" rx="36" ry="36"
+        fill="#1B9D91"/>
+  <text x="512" y="498" text-anchor="middle" class="label">HALO_ORA</text>
+
+  <!-- 100% -->
+  <rect x="120" y="630" width="784" height="72" rx="36" ry="36"
+        fill="#1B9D91" stroke="#0D6262" stroke-width="6"/>
+  <text x="512" y="678" text-anchor="middle" class="label" fill="#0B4040">HALO_ORA</text>
+</svg>
