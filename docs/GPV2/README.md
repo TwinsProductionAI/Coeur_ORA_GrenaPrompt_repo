@@ -2,6 +2,8 @@
 
 This folder contains the modular GPV2 release for `ORA_CORE_OS`.
 
+If you are new to the repository, start with [../QUICKSTART.md](../QUICKSTART.md).
+
 ## Files
 
 - [master_architecture.gpv2.json](master_architecture.gpv2.json)
