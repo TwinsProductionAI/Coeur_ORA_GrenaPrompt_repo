@@ -1,0 +1,54 @@
+{
+  "GPV2_TESTS": {
+    "META": {
+      "ID": "M10_ARCH_PLUS_V3_TESTS",
+      "TARGET_MODULE": "MODULE_ARCH_PLUS",
+      "TARGET_CODE_POS": "M10",
+      "TARGET_VERSION": "3.0.0",
+      "TYPE": "DECLARATIVE_VALIDATION",
+      "STATUS": "ACTIVE_PROPOSED"
+    },
+    "TESTS": [
+      {
+        "NAME": "M10_POSITION_LOCK",
+        "ASSERT": "META.CODE_POS == M10 and MODULE.NAME == ARCH_PLUS",
+        "WHY": "ARCH+ v3 is an advanced M10 variant, not a new M23 module."
+      },
+      {
+        "NAME": "FOUNDATION_GROUPS_PRESENT",
+        "ASSERT": "PROFILE_SCHEMA.REQUIRED_GROUPS has exactly six groups",
+        "WHY": "The ArchiPersona activation must always expose the six foundation columns."
+      },
+      {
+        "NAME": "NO_INVENTED_FACTS",
+        "ASSERT": "PREFILL_RULES contains SUGGESTION and INCERTAIN handling",
+        "WHY": "Unknown user data must never become a fact."
+      },
+      {
+        "NAME": "PERSONAE_LIMIT",
+        "ASSERT": "PERSONA_GENOME.MAX_ACTIVE_PERSONAE <= 4",
+        "WHY": "The article sets a maximum of four initial Personae."
+      },
+      {
+        "NAME": "ARC_LIMIT",
+        "ASSERT": "ARC_PLUS_PLUS.MAX_ACTIVE_ARCS <= 4",
+        "WHY": "The article sets a maximum of four initial ARC++."
+      },
+      {
+        "NAME": "PRIMORDIA_GATE_PRESENT",
+        "ASSERT": "PRIMORDIA_GATE.VETO_IF includes invented_profile_fact and identity_drift",
+        "WHY": "ARCH+ must be governed by truth and anti-drift rules."
+      },
+      {
+        "NAME": "RAG_CORE_BOUNDARY",
+        "ASSERT": "RAG_IMPLANT_BINDING.CORE_INDEX_DENIED includes client_private_profile_payload",
+        "WHY": "ORA_CORE_RAG must not store client private profile payloads in core."
+      },
+      {
+        "NAME": "GLG_ROUTE_PRESENT",
+        "ASSERT": "GL_G contains ROUTE(module=ORA_CORE_RAG,mode=ARCH_PLUS_IMPLANT)",
+        "WHY": "The module must declare its ORA_CORE_RAG implant path."
+      }
+    ]
+  }
+}

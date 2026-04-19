@@ -14,6 +14,7 @@ This folder contains one `GPV2` file per `ORA_CORE_OS` core module.
 - `M08` [MR_PROPRE](M08_MR_PROPRE.gpv2.json) : Risk Cleaner | group `S1`
 - `M09` [AUDIT](M09_AUDIT.gpv2.json) : Trace Layer | group `S1`
 - `M10` [ARCH_PLUS](M10_ARCH_PLUS.gpv2.json) : Profile Architecture | group `S2`
+  - Variant: [ARCH_PLUS v3 / Persona Genesis Engine](M10_ARCH_PLUS_V3.gpv2.json) with tests in [../tests/M10_ARCH_PLUS_V3.tests.gpv2.json](../tests/M10_ARCH_PLUS_V3.tests.gpv2.json).
 - `M11` [PRIORITY_MATRIX](M11_PRIORITY_MATRIX.gpv2.json) : Priority Matrix | group `S2`
 - `M12` [REM](M12_REM.gpv2.json) : Working Memory | group `S3`
 - `M13` [REM_PLUS](M13_REM_PLUS.gpv2.json) : Persistent Memory | group `S3`

@@ -204,7 +204,17 @@
                                      "used_in":  [
                                                      "SETUP"
                                                  ],
-                                     "path":  "modules/M10_ARCH_PLUS.gpv2.json"
+                                     "path":  "modules/M10_ARCH_PLUS.gpv2.json",
+                                     "variants":  [
+                                                       {
+                                                           "variant_id":  "M10_ARCH_PLUS_V3",
+                                                           "version":  "3.0.0",
+                                                           "status":  "ADVANCED_PROPOSED",
+                                                           "path":  "modules/M10_ARCH_PLUS_V3.gpv2.json",
+                                                           "tests":  "tests/M10_ARCH_PLUS_V3.tests.gpv2.json",
+                                                           "docs":  "ARCH_PLUS_V3.md"
+                                                       }
+                                                   ]
                                  },
                                  {
                                      "code_pos":  "M11",
