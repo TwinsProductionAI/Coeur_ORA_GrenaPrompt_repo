@@ -1,4 +1,4 @@
-﻿# GPV2 Index
+# GPV2 Index
 
 This folder contains the modular GPV2 release for `ORA_CORE_OS`.
 
@@ -20,6 +20,9 @@ Machine-readable index of optional public annex modules.
 
 - [modules/README.md](modules/README.md)
 One GPV2 file per core module.
+
+- [ARCH_PLUS_V3.md](ARCH_PLUS_V3.md)
+Supplementary documentation for the advanced M10 ARCH+ Persona Genesis Engine variant.
 
 - [annexes/README.md](annexes/README.md)
 Optional extensions that do not change the core `22`.
