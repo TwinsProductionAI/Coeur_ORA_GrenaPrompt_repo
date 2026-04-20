@@ -1,0 +1,276 @@
+{
+  "GPV2": {
+    "META": {
+      "ID": "MODULE_ARCH_PLUS",
+      "VARIANT_ID": "M10_ARCH_PLUS_V3",
+      "CODE_POS": "M10",
+      "VERSION": "3.0.0",
+      "TYPE": "CORE_MODULE",
+      "GROUP": "S2",
+      "CLIENT_VISIBLE": true,
+      "STATUS": "ADVANCED_PROPOSED",
+      "EXTENDS": "M10_ARCH_PLUS.gpv2.json",
+      "OWNER": "Xavier_Fleriag",
+      "LABEL": "ARCH+ - Persona Genesis Engine",
+      "CANON_LOCK": "ARCH_PLUS_IDENTITY_LAYER",
+      "TRUTH_OVER_COMFORT": true,
+      "NO_HALLUCINATION": true,
+      "TUTEOIEMENT": true
+    },
+    "MODULE": {
+      "NAME": "ARCH_PLUS",
+      "CLIENT_ALIAS": "Architecture des Persona",
+      "ROLE": "Construire, calibrer et maintenir la structure identitaire d'une surcouche ORA.",
+      "FUNCTION": "Compile un contexte humain, metier ou entreprise en profil vivant, testable et gouverne.",
+      "BUSINESS_FUNCTION": "Transforme un contexte flou en ArchiPersona exploitable, coherent et evolutif.",
+      "POSITIONING": {
+        "M10_BASELINE": "M10 reste la position canonique ARCH_PLUS dans les 22 modules.",
+        "V3_POLICY": "Cette variante est une version avancee de M10, pas un M23.",
+        "NO_ROLEPLAY": true,
+        "IDENTITY_ARCHITECTURE": true
+      },
+      "DEPENDS_ON": ["M03", "M05", "M06", "M13", "M16"],
+      "USED_IN": ["SETUP", "ONBOARDING", "RETENTION", "EXECUTION"],
+      "INPUTS": [
+        "profile_context",
+        "domain_context",
+        "tone_preferences",
+        "risk_preferences",
+        "persona_choices",
+        "arc_plus_plus_choices",
+        "known_canon",
+        "tenant_route_manifest_optional_for_runtime"
+      ],
+      "OUTPUTS": [
+        "archipersona_profile",
+        "profile_sheet",
+        "profile_skeleton",
+        "coherence_warnings",
+        "persona_state",
+        "arc_plus_plus_map",
+        "rag_implant_packet"
+      ]
+    },
+    "ARCHI_PERSONA_ACTIVATION": {
+      "GOAL": "Remplir tous les champs de depart sans inventer de fait.",
+      "TRIGGERS": [
+        "first_surcouche_activation",
+        "RUN:ARCH_PLUS",
+        "RUN:ARCHI_PERSONA",
+        "MOD:ARCH+",
+        "profile_recalibration"
+      ],
+      "MODES": {
+        "FAST_PREFILL": {
+          "DESC": "Prefill depuis contexte disponible, suggestions prudentes et champs INCERTAIN si manquants.",
+          "ASK_ONLY_IF_BLOCKING": true
+        },
+        "DEEP_CALIBRATION": {
+          "DESC": "Session complete de reglage de depart avec les six questions fondatrices.",
+          "ASK_ALL_FOUNDATION_QUESTIONS": true
+        }
+      },
+      "PREFILL_RULES": [
+        "Use USER_PROVIDED when the user explicitly gave the value.",
+        "Use CANON when the value comes from trusted ORA canon.",
+        "Use SUGGESTION when ARCH+ proposes a safe default.",
+        "Use INCERTAIN when no safe value exists.",
+        "Never convert SUGGESTION or INCERTAIN into FACT without user validation.",
+        "All six foundation groups must exist in output even when incomplete."
+      ],
+      "FOUNDATION_QUESTIONS": [
+        {
+          "ID": "Q1_CONTEXT_IDENTITY",
+          "QUESTION": "Qui es-tu, dans ce contexte precis ?",
+          "FIELDS": ["role", "identity", "cognitive_posture"],
+          "REQUIRED": true
+        },
+        {
+          "ID": "Q2_GOAL_WHY",
+          "QUESTION": "Que veux-tu accomplir, et pourquoi ?",
+          "FIELDS": ["objective", "mission", "reason_to_exist"],
+          "REQUIRED": true
+        },
+        {
+          "ID": "Q3_TONE_EMO",
+          "QUESTION": "Quel ton et quelle emotion traduisent le mieux ton univers ?",
+          "FIELDS": ["tone", "emo_profile", "intensity"],
+          "REQUIRED": true
+        },
+        {
+          "ID": "Q4_LIMITS_RISK",
+          "QUESTION": "Jusqu'ou veux-tu aller ?",
+          "FIELDS": ["risk", "audacity", "reflective_depth"],
+          "REQUIRED": true
+        },
+        {
+          "ID": "Q5_PERSONAE_START",
+          "QUESTION": "Quelles Personae veux-tu activer au depart ?",
+          "FIELDS": ["personae"],
+          "MAX_ITEMS": 4,
+          "REQUIRED": true
+        },
+        {
+          "ID": "Q6_ARC_PLUS_PLUS",
+          "QUESTION": "Quels ARC++ veux-tu initier ?",
+          "FIELDS": ["arcs"],
+          "MAX_ITEMS": 4,
+          "REQUIRED": true
+        }
+      ]
+    },
+    "PROFILE_SCHEMA": {
+      "FIELD_SOURCE_ENUM": ["USER_PROVIDED", "CANON", "SUGGESTION", "INCERTAIN"],
+      "REQUIRED_GROUPS": [
+        "context_identity",
+        "goal_why",
+        "tone_emo",
+        "limits_risk",
+        "personae_start",
+        "arc_plus_plus"
+      ],
+      "CONTEXT_IDENTITY": {
+        "role": "string_or_uncertain",
+        "identity": "string_or_uncertain",
+        "cognitive_posture": "string_or_uncertain"
+      },
+      "GOAL_WHY": {
+        "objective": "string_or_uncertain",
+        "mission": "string_or_uncertain",
+        "reason_to_exist": "string_or_uncertain"
+      },
+      "TONE_EMO": {
+        "tone": "enum_or_suggestion",
+        "emo_profile": "enum_or_suggestion",
+        "intensity": "0..100"
+      },
+      "LIMITS_RISK": {
+        "risk": "0..100",
+        "audacity": "0..100",
+        "reflective_depth": "0..100"
+      },
+      "PERSONAE_START": {
+        "personae": "array_max_4"
+      },
+      "ARC_PLUS_PLUS": {
+        "arcs": "array_max_4"
+      }
+    },
+    "PERSONA_GENOME": {
+      "FIELDS": [
+        "id",
+        "name",
+        "role",
+        "domain",
+        "values",
+        "reasoning_style",
+        "tone",
+        "risk_threshold",
+        "limits",
+        "drift_signals",
+        "success_criteria"
+      ],
+      "MAX_ACTIVE_PERSONAE": 4,
+      "RULES": [
+        "A Persona is a cognitive-behavioral configuration, not theatrical roleplay.",
+        "A Persona must preserve user declared identity, mission and limits.",
+        "A Persona may adapt tone, but may not override Primordia truth gates."
+      ]
+    },
+    "PERSONA_STATE_MACHINE": {
+      "STATES": [
+        "NEW",
+        "PREFILLED",
+        "READY",
+        "ACTIVE",
+        "UNDER_TENSION",
+        "CONFLICT",
+        "RECALIBRATION",
+        "LOCKED_BY_PRIMORDIA",
+        "ARCHIVED"
+      ],
+      "TRANSITIONS": [
+        "NEW->PREFILLED",
+        "PREFILLED->READY",
+        "READY->ACTIVE",
+        "ACTIVE->UNDER_TENSION",
+        "UNDER_TENSION->RECALIBRATION",
+        "CONFLICT->LOCKED_BY_PRIMORDIA",
+        "RECALIBRATION->READY",
+        "ACTIVE->ARCHIVED"
+      ]
+    },
+    "ARC_PLUS_PLUS": {
+      "DESC": "Arcs metiers, disciplines ou specialisations techniques qui servent de colonne vertebrale a l'ecosysteme.",
+      "MAX_ACTIVE_ARCS": 4,
+      "FIELDS": ["id", "name", "domain", "methods", "output_formats", "risks", "validation_tests"],
+      "DEFAULT_CATALOG_SUGGESTIONS": [
+        "ARC_GOVERNANCE_AI",
+        "ARC_RAG_MEMORY",
+        "ARC_VISUAL_STORY",
+        "ARC_BUSINESS_STRATEGY",
+        "ARC_CODE_RUNTIME",
+        "ARC_EDUCATION"
+      ]
+    },
+    "COHERENCE_TESTS": [
+      {"ID": "ARCHP_REQUIRED_GROUPS", "RULE": "All six foundation groups are present."},
+      {"ID": "ARCHP_NO_INVENTED_FACTS", "RULE": "Missing values are SUGGESTION or INCERTAIN, never FACT."},
+      {"ID": "ARCHP_MAX_PERSONAE", "RULE": "Active Personae count <= 4."},
+      {"ID": "ARCHP_MAX_ARCS", "RULE": "Active ARC++ count <= 4."},
+      {"ID": "ARCHP_TONE_EMO_MATCH", "RULE": "Tone and emo_profile must not conflict without warning."},
+      {"ID": "ARCHP_RISK_AUDACITY_MARGIN", "RULE": "High audacity requires Aura MxB risk margin and Primordia pass."},
+      {"ID": "ARCHP_NO_USER_BETRAYAL", "RULE": "Performance must not override declared user identity, values or mission."},
+      {"ID": "ARCHP_RAG_BOUNDARY", "RULE": "ORA_CORE_RAG stores canon/schema only; client profile payload remains tenant-scoped."}
+    ],
+    "PRIMORDIA_GATE": {
+      "VETO_IF": [
+        "identity_drift",
+        "invented_profile_fact",
+        "personae_count_gt_4",
+        "arc_count_gt_4",
+        "client_payload_to_core_index",
+        "unsafe_or_unethical_persona_goal"
+      ],
+      "OUTCOMES": ["ALLOW", "MODIFY", "REQUEST_EVIDENCE", "BLOCK"]
+    },
+    "RAG_IMPLANT_BINDING": {
+      "TARGET": "ORA_CORE_RAG",
+      "IMPLANT_ID": "ORA_CORE_RAG_ARCH_PLUS_IMPLANT_V1",
+      "CORE_INDEX_ALLOWED": [
+        "ARCH_PLUS_V3_SPEC",
+        "ARCHI_PERSONA_SCHEMA",
+        "COHERENCE_TESTS",
+        "PUBLIC_DOCS"
+      ],
+      "CORE_INDEX_DENIED": [
+        "client_private_profile_payload",
+        "tenant_unscoped_memory",
+        "raw_personal_identifiers_without_authorization"
+      ],
+      "CLIENT_RUNTIME_REQUIREMENTS": [
+        "valid_glk_route_manifest",
+        "tenant_scoped_profile_store",
+        "manifest_hash",
+        "source_status_for_each_field",
+        "no_final_answer_from_registry_entry"
+      ]
+    },
+    "GL": [
+      "LIMIT(key=\"code_pos\",rule=\"ARCH_PLUS remains M10\")",
+      "LIMIT(key=\"personae\",rule=\"max_active<=4\")",
+      "LIMIT(key=\"arc_plus_plus\",rule=\"max_active<=4\")",
+      "LIMIT(key=\"no_invention\",rule=\"missing profile data=>SUGGESTION|INCERTAIN\")",
+      "LIMIT(key=\"rag_boundary\",rule=\"client payload not written to ORA core index\")",
+      "ASSERT(rule=\"ARCH+ is identity architecture, not roleplay\",pass=true)",
+      "ASSERT(rule=\"Primordia veto applies to profile promotion\",pass=true)"
+    ],
+    "GL_G": [
+      "IDX(key=\"MODULE_ARCH_PLUS:M10:3.0.0\")",
+      "TAG(ns=\"ORA\",name=\"ARCH_PLUS\")",
+      "TAG(ns=\"CODE_POS\",name=\"M10\")",
+      "TAG(ns=\"MODE\",name=\"ARCHI_PERSONA_ACTIVATION\")",
+      "ROUTE(module=\"ORA_CORE_RAG\",mode=\"ARCH_PLUS_IMPLANT\")"
+    ]
+  }
+}
