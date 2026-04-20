@@ -1,16 +1,28 @@
-﻿# ORA_CORE_OS
+# ora-core-os
 
-Structured AI architecture in `GPV2`: 22 core modules, one canonical install order, one public spec, and optional annex extensions.
+Main public entry point for ORA Core OS.
+
+This repository contains the canonical ORA Core OS architecture in `GPV2`: 22 core modules, one install order, public specifications, and optional annex extensions.
+
+## Repository Role
+
+Start here when you want to understand the ORA Core architecture before reading runtime code or module-specific repositories.
+
+| Public order | Repository role |
+| ---: | --- |
+| 1 | Canonical ORA Core OS architecture and installation map. |
 
 ## Why This Repository Exists
 
-`ORA_CORE_OS` is published here to make the architecture:
+`ora-core-os` is published to make the architecture:
+
 - readable
 - installable
 - modular
 - verifiable
 
 This repo is for people who want a clear source of truth for:
+
 - core module order
 - dependency wiring
 - public install paths
@@ -62,12 +74,14 @@ flowchart LR
 ## Architecture At A Glance
 
 Section groups:
+
 - `S1` orchestration and governance
 - `S2` positioning and signal shaping
 - `S3` memory and learning
 - `S4` production pipeline
 
 Core rules:
+
 - `CODE_POS` is the canonical install order for the 22 core modules
 - `DEPENDS_ON` defines required upstream links
 - `GPV2` is the structural source of truth
@@ -76,39 +90,51 @@ Core rules:
 
 ## Repository Map
 
-- [docs/QUICKSTART.md](docs/QUICKSTART.md)
-Fastest entry path for new readers.
+- [docs/QUICKSTART.md](docs/QUICKSTART.md)  
+  Fastest entry path for new readers.
 
-- [docs/ORA_CORE_OS_PUBLIC_SPEC.md](docs/ORA_CORE_OS_PUBLIC_SPEC.md)
-Reference scope, invariants, structure, and public rules.
+- [docs/ORA_CORE_OS_PUBLIC_SPEC.md](docs/ORA_CORE_OS_PUBLIC_SPEC.md)  
+  Reference scope, invariants, structure, and public rules.
 
-- [docs/ORA_CORE_OS_22_Modules_GPV2.md](docs/ORA_CORE_OS_22_Modules_GPV2.md)
-Single-file reference for the 22-core architecture.
+- [docs/ORA_CORE_OS_22_Modules_GPV2.md](docs/ORA_CORE_OS_22_Modules_GPV2.md)  
+  Single-file reference for the 22-core architecture.
 
-- [docs/INSTALL_MANUAL_GPV2.md](docs/INSTALL_MANUAL_GPV2.md)
-Manual installation guide.
+- [docs/INSTALL_MANUAL_GPV2.md](docs/INSTALL_MANUAL_GPV2.md)  
+  Manual installation guide.
 
-- [docs/INSTALL_CUSTOM_GPT.md](docs/INSTALL_CUSTOM_GPT.md)
-Custom GPT installation guide.
+- [docs/INSTALL_CUSTOM_GPT.md](docs/INSTALL_CUSTOM_GPT.md)  
+  Custom GPT installation guide.
 
-- [docs/GPV2/README.md](docs/GPV2/README.md)
-Entry point for the modular GPV2 layout.
+- [docs/GPV2/README.md](docs/GPV2/README.md)  
+  Entry point for the modular GPV2 layout.
 
-- [docs/GPV2/modules_manifest.json](docs/GPV2/modules_manifest.json)
-Machine-readable core module index and install order.
+- [docs/GPV2/modules_manifest.json](docs/GPV2/modules_manifest.json)  
+  Machine-readable core module index and install order.
 
-- [docs/GPV2/annexes_manifest.json](docs/GPV2/annexes_manifest.json)
-Machine-readable optional annex index.
+- [docs/GPV2/annexes_manifest.json](docs/GPV2/annexes_manifest.json)  
+  Machine-readable optional annex index.
 
-- [docs/GPV2/modules/README.md](docs/GPV2/modules/README.md)
-Human-readable core module index.
+- [docs/GPV2/modules/README.md](docs/GPV2/modules/README.md)  
+  Human-readable core module index.
 
-- [docs/GPV2/annexes/README.md](docs/GPV2/annexes/README.md)
-Human-readable optional annex index.
+- [docs/GPV2/annexes/README.md](docs/GPV2/annexes/README.md)  
+  Human-readable optional annex index.
+
+## Public Repository Map
+
+| Order | Repository | Role |
+| ---: | --- | --- |
+| 1 | `ora-core-os` | Architecture and canonical module order. |
+| 2 | [`ora-core-runtime`](https://github.com/TwinsProductionAI/ora-core-runtime) | Runnable runtime and tests. |
+| 3 | [`ora-core-rag`](https://github.com/TwinsProductionAI/ora-core-rag) | Canonical retrieval layer and RAG Governor. |
+| 4 | [`ora-core-specs`](https://github.com/TwinsProductionAI/ora-core-specs) | Technical specifications and white papers. |
+| 5 | [`grenaprompt-linked`](https://github.com/TwinsProductionAI/grenapromptlinked-v1) | GL/GPL/GL_G language layer. |
+| 6 | [`ora-core-neroflux`](https://github.com/TwinsProductionAI/gpv2-exotique-neroflux) | Cognitive flow-control module. |
 
 ## Public Scope
 
 This public repository stays limited to:
+
 - `ORA_CORE_OS`
 - installable GPV2 files
 - optional annexes that explicitly extend ORA_CORE_OS
