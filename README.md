@@ -128,8 +128,8 @@ Core rules:
 | 2 | [`ora-core-runtime`](https://github.com/TwinsProductionAI/ora-core-runtime) | Runnable runtime and tests. |
 | 3 | [`ora-core-rag`](https://github.com/TwinsProductionAI/ora-core-rag) | Canonical retrieval layer and RAG Governor. |
 | 4 | [`ora-core-specs`](https://github.com/TwinsProductionAI/ora-core-specs) | Technical specifications and white papers. |
-| 5 | [`grenaprompt-linked`](https://github.com/TwinsProductionAI/grenapromptlinked-v1) | GL/GPL/GL_G language layer. |
-| 6 | [`ora-core-neroflux`](https://github.com/TwinsProductionAI/gpv2-exotique-neroflux) | Cognitive flow-control module. |
+| 5 | [`grenaprompt-linked`](https://github.com/TwinsProductionAI/grenaprompt-linked) | GL/GPL/GL_G language layer. |
+| 6 | [`ora-core-neroflux`](https://github.com/TwinsProductionAI/ora-core-neroflux) | Cognitive flow-control module. |
 
 ## Public Scope
 
