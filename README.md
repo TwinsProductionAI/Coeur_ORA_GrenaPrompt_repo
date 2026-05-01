@@ -32,6 +32,7 @@ This repo is for people who want a clear source of truth for:
 ## What You Get
 
 - a public specification
+- a master white paper
 - a single-file GPV2 core reference
 - one GPV2 file per core module
 - optional annex modules for targeted extensions
@@ -42,16 +43,18 @@ This repo is for people who want a clear source of truth for:
 ## Start Here
 
 1. [Quickstart](docs/QUICKSTART.md)
-2. [Public Spec](docs/ORA_CORE_OS_PUBLIC_SPEC.md)
-3. [Manual Install](docs/INSTALL_MANUAL_GPV2.md)
-4. [Custom GPT Install](docs/INSTALL_CUSTOM_GPT.md)
-5. [GPV2 Index](docs/GPV2/README.md)
+2. [Master White Paper](docs/ORA_CORE_OS_Master_WhitePaper.md)
+3. [Public Spec](docs/ORA_CORE_OS_PUBLIC_SPEC.md)
+4. [Manual Install](docs/INSTALL_MANUAL_GPV2.md)
+5. [Custom GPT Install](docs/INSTALL_CUSTOM_GPT.md)
+6. [GPV2 Index](docs/GPV2/README.md)
 
 ## Choose Your Path
 
 | Path | Use it when | Start file |
 | --- | --- | --- |
 | Quick evaluation | You want to understand the repo in a few minutes | [docs/QUICKSTART.md](docs/QUICKSTART.md) |
+| Strategic/technical overview | You want the full public architecture narrative | [docs/ORA_CORE_OS_Master_WhitePaper.md](docs/ORA_CORE_OS_Master_WhitePaper.md) |
 | Manual GPV2 install | You want full control over files and wiring | [docs/INSTALL_MANUAL_GPV2.md](docs/INSTALL_MANUAL_GPV2.md) |
 | Custom GPT install | You want to port the architecture into ChatGPT | [docs/INSTALL_CUSTOM_GPT.md](docs/INSTALL_CUSTOM_GPT.md) |
 | Modular inspection | You want to inspect each core module separately | [docs/GPV2/modules/README.md](docs/GPV2/modules/README.md) |
@@ -92,6 +95,9 @@ Core rules:
 
 - [docs/QUICKSTART.md](docs/QUICKSTART.md)  
   Fastest entry path for new readers.
+
+- [docs/ORA_CORE_OS_Master_WhitePaper.md](docs/ORA_CORE_OS_Master_WhitePaper.md)  
+  Master white paper for the public ORA Core OS architecture.
 
 - [docs/ORA_CORE_OS_PUBLIC_SPEC.md](docs/ORA_CORE_OS_PUBLIC_SPEC.md)  
   Reference scope, invariants, structure, and public rules.
